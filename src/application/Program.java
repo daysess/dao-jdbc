@@ -1,7 +1,11 @@
 package application;
 
+import java.util.Date;
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
+import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
@@ -11,7 +15,7 @@ public class Program {
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		Seller seller = sellerDao.findById(3);
-		/*
+		
 		System.out.println("=== Teste 1 - Seller findById ===");
 		System.out.println(seller);
 		
@@ -38,7 +42,7 @@ public class Program {
 		alterSeller.setName("Joana Dark");
 		sellerDao.update(alterSeller);
 		System.out.println("Seller atualizado! ");
-		*/
+		
 		System.out.println("=== Teste 6 - Seller delete ===");
 		sellerDao.delete(2);
 		System.out.println("Seller deletado com sucesso!");
